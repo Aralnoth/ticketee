@@ -21,6 +21,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'dynamic_form', '1.1.4'
 
 group :test, :development do
   gem 'rspec-rails', '~>2.11'
