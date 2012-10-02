@@ -16,6 +16,12 @@ RSpec.configure do |config|
   # config.mock_with :mocha
   # config.mock_with :flexmock
   # config.mock_with :rr
+  Rspec.configure do |config|
+    config.before do 
+      ActionMailer::Base.deliveries.clear
+    end
+  end
+
   config.include EmailSpec::Helpers
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
